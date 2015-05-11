@@ -1,0 +1,39 @@
+
+<h1>Dashbord</h1>
+<div>
+<h1>Admin</h1> <input id="filter" ng-model="funame" placeholder="search...">
+
+			<table class="table">
+			<tr>
+			<td><input type="name" ng-model="change.firstName" placeholder="First Name"></td>
+			<td><input type="name" ng-model="change.lastName" placeholder="Last Name"></td>
+			<td><input type="email" ng-model="change.username" placeholder="User Name" require></td>
+			<td><input type="city" ng-model="change.city" placeholder="City"></td>
+			<td><input type="tel" ng-model="change.phnumber" placeholder="Ph Number"></td>
+			<td><button type="submit" ng-click="update(change)" class="btn btn-info" value="Update">Update</button></td>
+
+			</tr>
+
+				<THEAD>
+				<tr>
+					<th>First_name</th>
+					<th>Last_name</th>
+					<th>Username</th>
+					<th>City</th>
+					<th>Phno</th>
+
+				</tr>
+				<tbody>
+					<tr  ng-repeat="user in users | filter:funame" ng-show="user.username !== 'admin@gmail.com'">		
+						<td>{{user.firstName}}</td>
+						<td>{{user.lastName}}</td>
+						<td>{{user.username}}</td>
+						<td>{{user.city}}</td>
+						<td>{{user.phnumber}}</td>
+						<td><button class="btn btn-warning" ng-click="edit(user._id)">Edit</button></td>
+						<td><button class="btn btn-danger" ng-click="remove(user._id)">Remove</button></td>
+					</tr>	
+				</tbody>
+			</THEAD>
+			</table>
+</div>

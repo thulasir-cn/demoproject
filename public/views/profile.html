@@ -1,0 +1,93 @@
+<div class="container" ng-show="currentUser.username !== 'admin@gmail.com'">
+<h3><p style="color:blue; font-family: 'Coming Soon', cursive;width:100px"><b>{{currentUser.firstName | uppercase}}</b></p> Profile</h3>
+<button type="submit" ng-click="edit(currentUser._id)" class="btn btn-warning"  style="float:right">Edit</button>
+			<div>
+				<table class="table" ng-show="change">
+				
+				<tr>
+						<td>First_name :</td>
+						<td><input  ng-model="change.firstName"></td>
+				</tr>
+				<tr>
+						<td>Last_name :</td>
+						<td><input  ng-model="change.lastName"></td>
+				</tr>
+				<tr>
+						<td>Username :</td>
+						<td><input  ng-model="change.username"></td>
+				</tr>
+				<tr>
+						<td>City :</td>
+						<td><input  ng-model="change.city"></td>
+				</tr>
+				<tr>
+						<td>Ph Number :</td>
+						<td><input  ng-model="change.phnumber"></td>
+				</tr>
+						<td>
+								<button type="submit" ng-click="update(change)" class="btn btn-info" value="Update">Update
+								</button>
+						</td>
+				
+			
+				</table>
+		</div>
+<div>
+
+<table class="table" ng-show="!change" >
+				<tr>
+						<td>First_name :</td>
+						<td>{{currentUser.firstName}}</td>
+				</tr>
+				<tr>
+						<td>Last_name :</td>
+						<td>{{currentUser.lastName}}</td>
+				</tr>
+				<tr>
+						<td>Username :</td>
+						<td>{{currentUser.username}}</td>
+				</tr>
+				<tr>
+						<td>City :</td>
+						<td>{{currentUser.city}}</td>
+				</tr>
+				<tr>
+						<td>Ph Number :</td>
+						<td>{{currentUser.phnumber}}</td>
+				</tr>
+</table>
+</div>
+</div>
+
+
+<!-- <div>
+				<table class="table">
+				
+				<tr>
+						<td>First_name :</td>
+						<td><span ng-hide="">{{change.firstName}}</span><input ng-show=""  ng-model='{{change.firstName}}'></td>
+				</tr>
+				<tr>
+						<td>Last_name :</td>
+						<td><span ng-hide="">{{change.lastName}}</span><input ng-show=""  ng-model="{{change.lastName}}"></td>
+				</tr>
+				<tr>
+						<td>Username :</td>
+						<td><span ng-hide="">{{change.username}}</span><input ng-show="" ng-model="{{change.username}}"></td>
+				</tr>
+				<tr>
+						<td>City :</td>
+						<td><span ng-hide="">{{change.city}}</span><input ng-show="" ng-model="{{change.city}}"></td>
+				</tr>
+				<tr>
+						<td>Ph Number :</td>
+						<td><span ng-hide="">{{change.phnumber}}</span><input ng-show="" ng-model="{{change.phnumber}}"></td>
+				</tr>
+						<td>
+								<button type="submit" ng-click="update(change)" class="btn btn-info" value="Update">Update
+								</button>
+						</td>
+				
+			
+				</table>
+		</div> -->

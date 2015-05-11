@@ -1,0 +1,23 @@
+{
+  "name": "demoproject",
+  "version": "0.0.0",
+  "authors": [
+    "thulasi"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "demo",
+    "poject"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ]
+}
